@@ -98,6 +98,11 @@ body {
   text-decoration: none;
 }
 
+.info-nav-link {
+  display: flex;
+  align-items: center;
+}
+
 .site-nav {
   display: flex;
   font-weight: 500;
@@ -266,6 +271,8 @@ body {
 .portfolio-button-secondary:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-work-list {
@@ -459,7 +466,7 @@ body {
 }
 
 .social-item:hover,
-.social-item:hover {
+.social-item:focus {
   background-color: var(--accent-color);
 }
 .social-link {
@@ -487,6 +494,7 @@ body {
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+  margin-top: 0;
   margin-bottom: 50px;
   text-align: center;
 }
@@ -497,17 +505,22 @@ body {
 .clients-item {
   width: 170px;
   height: 92px;
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.clients-link {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--clients-color);
   border-radius: 4px;
 }
-
-.clients-item:hover {
-  border: 1px solid var(--accent-color);
-}
-
 .clients-icon {
   fill: var(--clients-color);
 }
@@ -524,6 +537,7 @@ body {
 
 .footer-box {
   display: flex;
+  align-items: baseline;
 }
 .footer .logo {
   margin-bottom: 28px;
@@ -579,6 +593,7 @@ body {
   text-transform: uppercase;
   color: var(--white-color);
   margin-bottom: 20px;
+  margin-top: 0;
 }
 
 .footer-social-list {
@@ -598,7 +613,8 @@ body {
   justify-content: center;
 }
 
-.footer-link:hover {
+.footer-link:hover,
+.footer-link:focus {
   background-color: var(--accent-color);
 }
 .footer-item {
